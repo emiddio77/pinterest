@@ -10,6 +10,12 @@ class PublicController extends Controller
     return view('welcome');
    }
    public function aboutus(){
-    return view('aboutus');
-   }
+         $friends = [
+             ['name'=>'pippo'],
+             ['name'=>'pluto'],
+             ['name'=>'minnie'],
+         ];
+         return view('aboutus', ['friends'=>$friends]);
+            }
+
 }
