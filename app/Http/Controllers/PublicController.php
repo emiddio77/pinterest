@@ -10,6 +10,7 @@ class PublicController extends Controller
     {
         return view('welcome');
     }
+
     public function aboutus()
     {
         $friends = [
@@ -19,18 +20,29 @@ class PublicController extends Controller
         ];
         return view('aboutus', ['friends' => $friends]);
     }
+
     public function details($name)
     {
         // dd($name);
         $friends = [
-            ['name'=>'pippo'],
-            ['name'=>'pluto'],
-            ['name'=>'minnie'],
+            ['name' => 'pippo'],
+            ['name' => 'pluto'],
+            ['name' => 'minnie'],
+
         ];
+        // dd($friends);
         foreach ($friends as $friend) {
-            if($name == $friend['name']);
-            // dd($friend);
-            return view('details', ['friend'=>'$friend']);
-        }
+
+            if ($name == $friend['name']) {
+                // dd($friend);
+                return view('details', ['friend' => $friend]);
+            }
+        };
+
     }
+    public function contactUs()
+    {
+        return view('contattaci');
+    }
+
 }
