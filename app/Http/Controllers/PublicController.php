@@ -42,6 +42,7 @@ class PublicController extends Controller
         };
 
     }
+
     public function contactUs()
     {
         return view('contattaci');
@@ -53,7 +54,10 @@ class PublicController extends Controller
         $usermessage = $request->input('message');
 
         Mail::to($mail)->send(new ContactMail($name, $mail, $usermessage));
-        return redirect()->route('homepage')->with('status', 'mail inviata');
+        return redirect()->route('thank.you')->with('status', 'mail inviata');
     }
-
+    public function thankYou()
+    {
+        return view('mail/thankyou');
+    }
 }

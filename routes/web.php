@@ -10,3 +10,5 @@ Route::get('/details/{name}', [PublicController::class, 'details'])->name('detta
 //mail
 Route::get('/contattaci', [PublicController::class, 'contactUs'])->name('contatact.us');
 Route::post('/contattaci/submit', [PublicController::class, 'submit'])->name('contact.submit');
+Route::get('/mail/thankyou', [PublicController::class, 'thankYou'])->name('thank.you');
+
