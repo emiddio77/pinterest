@@ -1,7 +1,7 @@
 <x-layout>
 
 
-<style>
+{{-- <style>
         contact {
             font-family: Arial, sans-serif;
             background-color: #cfad3d;
@@ -22,7 +22,7 @@
         p {
             line-height: 1.5;
         }
-    </style>
+    </style> --}}
 
     <div class="container">
         <h1>ciao {{ $username }}Grazie per esserti iscritto!</h1>

@@ -1,6 +1,7 @@
 <x-layout>
     <x-navbar />
-        <style>
+
+       {{-- <style>
             body {
                 font-family: Arial, sans-serif;
                 background-color: #f0f0f0;
@@ -14,14 +15,11 @@
                 border-radius: 5px;  
 
             }
-            h1 {
-                text-align: center;
-                color: #333;
-            }
+
             p {
                 line-height: 1.5;
             }
-        </style>
+        </style> --}}
 
         <div class="container mt-5">
             <h1>Grazie mille! </h1>
