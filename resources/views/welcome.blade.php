@@ -7,6 +7,7 @@
             {{ session('status') }}
         </div>
     @endif
+    <header class="header">
     <div class="container mt-5">
         <div class="row">
 
@@ -112,4 +113,5 @@
             </div>
         </div>
     </div>
+</header>
 </x-layout>

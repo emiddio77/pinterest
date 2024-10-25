@@ -60,4 +60,7 @@ class PublicController extends Controller
     {
         return view('mail/thankyou');
     }
+    public function inserisci(){
+        return view('/card/insert');
+    }
 }

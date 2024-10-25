@@ -12,3 +12,5 @@ Route::get('/contattaci', [PublicController::class, 'contactUs'])->name('contata
 Route::post('/contattaci/submit', [PublicController::class, 'submit'])->name('contact.submit');
 Route::get('/mail/thankyou', [PublicController::class, 'thankYou'])->name('thank.you');
 
+//inserisci card
+route::get('/card/insert', [PublicController::class, 'inserisci'])->name('inser_isci');
