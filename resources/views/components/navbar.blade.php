@@ -15,9 +15,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('contatact.us') }}">contattaci</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
+
         </ul>
       </div>
     </div>
