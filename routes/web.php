@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,4 +14,6 @@ Route::post('/contattaci/submit', [PublicController::class, 'submit'])->name('co
 Route::get('/mail/thankyou', [PublicController::class, 'thankYou'])->name('thank.you');
 
 //inserisci card
-route::get('/card/insert', [PublicController::class, 'inserisci'])->name('inser_isci');
+route::get('/card/insert', [ProductController::class, 'inserisci'])->name('inser_isci');
+route::post('/card/create', [ProductController::class, 'store'])->name('product.store');
+route::get('/card/photos', [ProductController::class, 'foto'])->name('pho.tos');

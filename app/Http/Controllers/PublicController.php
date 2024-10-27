@@ -48,7 +48,7 @@ class PublicController extends Controller
         return view('contattaci');
     }
     public function submit(Request $request){
-        // dd($request);
+        // dd($request->all());
         $name = $request->input('username');
         $mail = $request->input('mail');
         $usermessage = $request->input('message');
@@ -60,7 +60,5 @@ class PublicController extends Controller
     {
         return view('mail/thankyou');
     }
-    public function inserisci(){
-        return view('/card/insert');
-    }
+
 }
