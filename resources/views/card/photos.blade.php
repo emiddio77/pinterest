@@ -1,8 +1,10 @@
 <x-layout>
 
     <x-navbar />
-   <h1>FOTOS</h1>
-   <table  class="table table-bordered" >
+   <h1>FOTOS si è bloccato ad 1.30 perchè non crea la cartella public in storage
+
+   </h1>
+   {{-- <table  class="table table-bordered" >
 
    <tr>
     <th scope="col">id</th>
@@ -10,9 +12,9 @@
     <th scope="col">description</th>
     <th scope="col">didascalia</th>
   </tr>
-</table>
+</table> --}}
    @foreach ($photos as $photo)
-   <table  class="table table-bordered" >
+   {{-- <table  class="table table-bordered" >
     <tbody>
       <tr  >
         <th scope="row">{{ $photo->id }}</th>
@@ -22,6 +24,22 @@
       </tr>
 
     </tbody>
-  </table>
-   @endforeach
+  </table> --}}
+  <div class="container justify-content-center">
+  <div class="row">
+    <div class="col-12">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ $photo->name }}</h5>
+              <h5 class="card-title">{{ $photo->description }}</h5>
+              <h5 class="card-title">{{ $photo->didascalia}}</h5>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+  @endforeach
     </x-layout>

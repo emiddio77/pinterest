@@ -13,14 +13,23 @@ class ProductController extends Controller
         $name= $request->name;
         $description= $request->description;
         $didascalia= $request->didascalia;
+        $img = $request->file('img')->store('public/img');
+        // 'image' => $request->file('image')->store('public/images'),
+        // $photo = new Photo();
+        // $photo->name = $name;
+        // $photo->description =  $description;
+        // $photo->didascalia =  $didascalia;
+// dd($request->all());
+        // $photo->save();
+        Photo::create([
+            'name'=> $name,
+            'description' => $description,
+            'didascalia' => $didascalia,
+            'img' => $img,
 
-        $photo = new Photo();
-        $photo->name = $name;
-        $photo->description =  $description;
-        $photo->didascalia =  $didascalia;
+        ]);
 
-        $photo->save();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'articolo creato correttamente');
 
     }
     public function inserisci(){

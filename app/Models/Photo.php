@@ -11,6 +11,7 @@ class Photo extends Model
     protected $fillable = [
         'name',
         'description',
-        'didascalia'
+        'didascalia',
+        'img'
     ];
 }
